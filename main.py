@@ -70,6 +70,7 @@ colomns_with_na_dropped = nlf_data.dropna(axis=1)
 colomns_with_na_dropped.head()
 
 #Şimdi bakalım ne kadar değer kayıbımız var :)
+
 print("Orijinal veri setinin sütunları : %d \n" % nlf_data.shape[1])
 print("Eksik verileri çıkarıldıktan sonraki sütun sayısı : %d" % colomns_with_na_dropped.shape[1])
 
@@ -105,6 +106,6 @@ missing_values_count[0:10]
 #şimdi sadece __year_resale_value değeri sütununda ortalama değeri bulacağım
 sbunset_ort=subset_nlf_data["__year_resale_value"].mean()
 sbunset_ort
-21.288
+
 #Tablodaki NaN değerlerinin yerine hepsine sıfır'0' yazıyoruz.
 subset_nlf_data.fillna(sbunset_ort)
